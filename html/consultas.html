@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS MUSICALES RAUCH</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="cambioModo">
+    <header>
+        <div class="containerHeader">
+            <div class="containerLogo"><img src="../img/header/logo.png" alt="logo"></div>
+            <div class="nombrePagina"> <h1>EVENTOS MUSICALES RAUCH</h1></div>
+            <div class="btn_menu"><img src="../img/header/menu_hamburguesa.png" alt="menu"></div>
+            <div class="menu">
+               <ul class="navigation">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="consultas.html">consultas</a></li>
+                </ul>
+            </div>  
+        </div>
+        <div class="container_modo_claro_oscuro">
+            <button class="btn_cambiar_modo"><img class="img_claro_oscuro" src="../img/header/sol_luna_negro.png" alt="cambiar modo"></button>
+        </div>
+    </header>
+    <main>
+        <p class="texto_consulta">INGRESE SUS DATOS:</p>
+        <form action="" id="form" class="form-registro">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="nombre" placeholder="Nombre" required maxlength="15">
+            <input class="consulta" type="text" name="consulta" placeholder="consulta" required minlength="5">
+            <button>Comprobar Datos</button>
+            <div><p id="mostraDatos"></p></div>
+            
+            
+        </form>
+            
+        <div class="form-captcha" id="captcha"></div>    
+        <p class="" id="envioCorrecto"></p>
+    </main>
+    <footer>
+        <div class="containerFooter">
+            <p>PÁGINA CREADA POR MANUEL DUALDE PARA WEB - TUDAI RAUCH 2024</p>
+        </div>
+    </footer>
+   
+    <script src="../script/consultas.js"></script>
+    <script src="../script/responsive.js"></script>
+</body>
+</html>

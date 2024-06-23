@@ -1,0 +1,574 @@
+
+
+/* general*/
+
+
+body{
+
+    background-image: url('../img/fondo/fondo_celu.jpg');
+    /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-size: cover;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-attachment: fixed;
+    /* Centra la imagen de fondo */
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    
+}
+.modo_oscuro{
+    background-image: url('../img/fondo/fondo_celu_invertido.jpg');
+    color: white;
+}
+
+@font-face{
+    font-family:"gevenda";
+    src: url('../fonts/gevenda/OpenType-PS/Gevenda-Regular.otf');
+}
+@font-face {
+    font-family: "cartel";
+    src: url('../fonts/h-harestone-font/Harestone-d964V.otf');
+}
+
+/* header*/
+header{
+    position:sticky;
+    width: 100%;
+    top: 0;
+}
+.containerHeader{
+    backdrop-filter: blur(10px);
+    background-color:rgba(255, 221, 0, 0.816);
+    border-radius: 10px;
+    width: 100%;
+    height:32vw;
+    display: grid;
+    grid-template-areas:
+    "logo titulo menuHamburguesa"
+    "menu menu menu";
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.containerLogo{
+    display: flex;
+    grid-area: logo;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+}
+.containerLogo img{
+    width: 12vw;
+}
+
+.nombrePagina{
+    grid-area: titulo;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+}
+.nombrePagina h1{
+    font-size: 8vw; 
+    font-family: "cartel";
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.626);
+}
+
+.btn_menu {
+    grid-area: menuHamburguesa;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_menu img{
+    width: 10vw;
+}
+
+
+.menu {
+    width: 100%;
+    grid-area: menu;
+    display: flex;
+}
+
+ul.navigation {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(126, 3, 3, 0.829);
+
+}
+
+    /* si tiene tambien la clase show */
+ul.navigation.menu_responsive {
+    display: flex;
+}
+
+ul.navigation li {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 15px 20px;
+}
+
+ul.navigation li a {
+    text-decoration: none;
+    color: white;
+    font-family: "cartel";
+}
+
+
+.container_modo_claro_oscuro{
+    width: 15vw;
+}
+.container_modo_claro_oscuro img{
+    width: 7vw;
+}
+
+/*footer*/
+footer{
+    position: static;
+    bottom: 0%;
+}
+
+.containerFooter{
+    display:flex;
+    width: 100%;
+    height: 10vw;
+    margin-bottom: 0%;
+    margin-top:35vw;
+    align-items: end;
+    justify-content: center;
+    position: static;
+    bottom: 0;
+    
+
+}
+.containerFooter p{
+    font-size: 4vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(255, 221, 0);
+
+}
+
+
+
+
+
+/*home*/
+
+
+.containerMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerBandaPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:  90vw;
+    background-color: rgba(0, 0, 0, 0.325);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 5vw;
+    
+}
+.containerBandaPrincipal img{
+    width:  90vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.containerBandaPrincipal h1{
+    font-size: 6vw;
+    font-family:'gevenda';
+    text-decoration: double;
+    text-shadow: 2px 2px 4px rgb(98, 98, 98);
+
+}
+.container_info_banda_principal{
+    width: 33vw;
+    display: flex;
+    background-color: rgb(255, 221, 0);
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+    align-items: center;
+    justify-content:center
+}
+.container_info_banda_principal p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.infoBandaPrincipal{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.masInfo{
+    display: flex;
+}
+
+.masInfo li{
+    list-style: none;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10vw;
+}
+
+
+
+/*eventos*/
+
+
+
+th, td {
+    border-bottom: 1px solid #444343;
+    padding: 15px;
+    text-align: left;
+    font-size: 10px;
+    width: 25vw;
+}
+th.modificar{
+  width: 10vw;
+}
+tr{
+    width: 100vw;
+    height: 15vw;
+}
+tr:hover {background-color: rgb(255, 221, 0);}
+
+tr button img{
+    width: 4vw;
+}
+
+.formulario_eventos{
+    background-color: rgba(0, 0, 0, 0.355);
+    border: solid black 2px;
+    margin:5vw;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+    text-align: center;
+}
+.formulario_eventos h1{
+    font-size: 5vw;
+}
+.formulario_eventos h2{
+    font-size: 3vw;
+}
+.formulario_eventos input{
+    margin-bottom: 5vw;
+}
+
+.borrarEvento, .ocultar_formulario{
+    display: none;
+}
+
+#addEvent, #btnEditar{
+    width: 20vw;
+
+}
+#formulario_edit{
+    position: absolute;
+    top: 25%;
+    background-color: rgba(240, 248, 255, 0.888);
+}
+
+
+
+
+
+/* consultas*/
+
+
+
+
+.texto_consulta{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 5vw;
+}
+.form-registro input{
+    height: 5vw;
+    width: 80vw;
+    margin-bottom:3vw ;
+}
+.form-registro .consulta{
+    height: 25vw;
+}
+.form-registro button{
+    width: 25vw;
+}
+.form-registro p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-captcha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+.form-captcha img{
+    margin-bottom: 3vw;
+}
+.form-captcha button{
+    margin-top: 3vw;
+}
+
+#envioCorrecto{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+@media screen and (min-width: 600px){
+
+    /* general*/
+
+
+    body{
+        background-image: url('../img/fondo/fondo_compu_oscuro.jpg');
+    }
+    .modo_oscuro{
+        background-image: url('../img/fondo/fondo_compu_invertido.jpg')
+    }
+
+    /*header*/
+
+    .btn_menu {
+       display: none;
+    }
+    header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .containerHeader{
+        display: grid;
+        grid-template-areas:
+        "logo menu menu"
+        "logo titulo titulo";
+        align-content: start;
+        width: 100vw;
+        height: 8vw;
+        justify-content: flex-start;
+    }
+    .containerLogo{
+        width: 20vw;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .containerLogo img{
+        width: 5vw;
+    }
+    .containerLogo h1{
+        width: 100vw;
+        height: 9vw;
+
+    }
+
+    .nombrePagina{
+        height: 4vw;
+        align-items: flex-start;
+ 
+    }
+    .nombrePagina h1{
+        font-size: 3vw;
+    }
+    .menu{
+        width: 80vw;
+        height: 3vw;
+    }
+
+    ul.navigation {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color:rgba(255, 221, 0, 0);
+    }
+    ul.navigation li a{
+        font-size: 20px;
+        color: black;
+    }
+    .container_modo_claro_oscuro img{
+        width: 2vw;
+    }
+
+     /*footer*/
+    
+    .containerFooter{
+        height: 6vw;
+        margin-top: 5vw;
+        background-color: rgba(0, 0, 0, 0.495);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .containerFooter p{
+        font-size: 20px;
+    }
+
+
+
+    /*home*/
+
+    
+    .containerMain{
+        align-items: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .containerBandaPrincipal{
+        width: 40vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    .containerBandaPrincipal h1{
+        font-size: 3vw;
+    }
+    .containerBandaPrincipal img{
+        width: 30vw;
+    }
+    .infoBandaPrincipal{
+        width: 30vw;
+    }
+    .container_info_banda_principal{
+        width: 12vw;
+        height: 3vw;
+    }
+    .container_info_banda_principal p{
+        font-size: 2vh;
+    }
+
+    .masInfo{
+        display: flex;
+        justify-content: center;
+        width: 40vw;
+        margin-top: 1vw;
+    
+    }
+    .masInfo li{
+        text-align: center;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        font-size: 18px;
+    }
+
+
+
+    /*eventos*/
+
+
+    th, td {
+
+        font-size: 1vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    tr{
+        width: 100vw;
+        height: 4vw;
+    }
+    tr button img{
+        width: 2vw;
+    }
+    .formulario_eventos{
+
+        margin-left: 20vw;
+        margin-right: 20vw;
+        padding: 3vw;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+    .formulario_eventos h1{
+        font-size: 25px;
+    }
+    .formulario_eventos h2{
+        font-size: 20px;
+    }
+    .formulario_eventos input{
+        width: 40vw;
+        height: 2vw;
+    }
+    
+    
+    #addEvent, #btnEditar{
+        width: 10vw;
+        height: 3vw;
+
+    }
+
+
+
+
+
+
+
+    /*consultas*/
+    .texto_consulta{
+        margin-top: 5vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .form-registro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        margin-top: 5vw;
+    }
+    .form-registro input{
+        height: 2vw;
+        width: 50vw;
+        margin-bottom:1vw ;
+    }
+    .form-registro .consulta{
+        height: 20vw;
+    }
+    .form-registro button{
+        width: 8vw;
+        height: 3vw;
+    }
+    .form-registro p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .form-captcha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .form-captcha img{
+        margin-bottom: 3vw;
+    }
+    .form-captcha button{
+        margin-top: 3vw;
+        width: 8vw;
+        height: 3vw;
+    }
+    
+}
+
+

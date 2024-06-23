@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS MUSICALES RAUCH</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="cambioModo">
+    <header>
+        <div class="containerHeader">
+            <div class="containerLogo"><img src="../img/header/logo.png" alt="logo"></div>
+            <div class="nombrePagina"> <h1>EVENTOS MUSICALES RAUCH</h1></div>
+            <div class="btn_menu"><img src="../img/header/menu_hamburguesa.png" alt="menu"></div>
+            <div class="menu">
+               <ul class="navigation">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="consultas.html">consultas</a></li>
+                </ul>
+            </div>  
+        </div>
+        <div class="container_modo_claro_oscuro">
+            <button class="btn_cambiar_modo"><img class="img_claro_oscuro" src="../img/header/sol_luna_negro.png" alt="cambiar modo"></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="containerTabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>BANDA</th>
+                        <th>LUGAR</th>
+                        <th>FECHA</th>>
+                        <th class="modificar"></th>
+                        <th class="modificar"></th>
+                    </tr>
+                </thead>
+                <tbody class="datos_tabla_banda"></tbody>
+            </table>
+        </div>
+
+        <form class="formulario_eventos">
+            <h1>NUEVO EVENTO</h1> 
+            <label for="nuevo_nombre_banda">INGRESE EL NOMBRE DE LA BANDA</label>
+            <input type="text" id="nuevo_nombre_banda" placeholder="BANDA" required>
+            <label for="nuevo_nombre_lugar">INGRESE EL NOMBRE DEL LUGAR</label>
+            <input type="text" id="nuevo_nombre_lugar" placeholder="LUGAR" required>
+            <label for="nueva_fecha_evento">INGRESE LA FECHA</label> 
+            <input type="text" id="nueva_fecha_evento" placeholder="FECHA" required> 
+            <label for="nueva_hora_evento">INGRESE LA HORA</label> 
+            <input type="text" id="nueva_hora_evento" placeholder="HORA" required>
+            <label for="es_importante">¿ES UN EVENTO IMPORTANTE?</label>
+            <input type="checkbox" name="importante" id="es_importante">
+            <h2>COMPLETE LOS CAMPOS SIGUIENTES SOLO SI ES UN EVENTO IMPORTANTE</h2>
+            <label for="nueva_img_banda">INGRESE IMAGEN</label>
+            <input type="text" id="nueva_img_banda" placeholder="url"> 
+            <label for="nueva_descripcion_banda">INGRESE UNA DESCRIPCION</label> 
+            <input type="text" id="nueva_descripcion_banda" placeholder="DESCRIPCION"> 
+            <button type="submit" id="addEvent">AGREGAR BANDA +</button>
+    
+        </form>
+
+        <form class="formulario_eventos ocultar_formulario" id="formulario_edit">
+            <h1>EDITAR EVENTO</h1> 
+            <label for="editar_nombre_banda">INGRESE EL NOMBRE DE LA BANDA</label>
+            <input type="text" id="editar_nombre_banda" placeholder="BANDA" required>
+            <label for="editar_nombre_lugar">INGRESE EL NOMBRE DEL LUGAR</label>
+            <input type="text" id="editar_nombre_lugar" placeholder="LUGAR" required>
+            <label for="editar_fecha_evento">INGRESE LA FECHA</label> 
+            <input type="text" id="editar_fecha_evento" placeholder="FECHA" required> 
+            <label for="editar_hora_evento">INGRESE LA HORA</label> 
+            <input type="text" id="editar_hora_evento" placeholder="HORA" required>
+            <label for="editar_importante">¿ES UN EVENTO IMPORTANTE?</label>
+            <input type="checkbox" name="importante" id="editar_importante">
+            <h2>COMPLETE LOS CAMPOS SIGUIENTES SOLO SI ES UN EVENTO IMPORTANTE</h2>
+            <label for="editar_img_banda">INGRESE IMAGEN</label>
+            <input type="text" id="editar_img_banda" placeholder="url"> 
+            <label for="editar_descripcion_banda">INGRESE UNA DESCRIPCION</label> 
+            <input type="text" id="editar_descripcion_banda" placeholder="DESCRIPCION"> 
+            <button type="submit" id="btnEditar">EDITAR BANDA +</button>
+    
+        </form>
+
+        <div class="borrarEvento" id="eventosPrincipales"></div>
+    </main>
+    <footer>
+        <div class="containerFooter">
+            <p>PÁGINA CREADA POR MANUEL DUALDE PARA WEB - TUDAI RAUCH 2024</p>
+        </div>
+    </footer>
+    <script src="../script/eventos.js"></script>
+    <script src="../script/responsive.js"></script>
+</body>
+</html>
