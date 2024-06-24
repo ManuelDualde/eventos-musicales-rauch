@@ -8,8 +8,8 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 const url = "https://6670a8ef0900b5f8724b4bb0.mockapi.io/api";
 
-let btnNewBanda = document.getElementById("addEvent");
-btnNewBanda.addEventListener("submit", addBanda);
+let formNewEvent = document.getElementById("formulario_nuevo_evento");
+formNewEvent.addEventListener("submit", addBanda);
 
 
 //--------------- FUNCIONES -------------------
@@ -117,7 +117,7 @@ function mostrarEventos(eventos){
 function addBanda(e) {
 
     e.preventDefault();
-
+    
     let input_nombre_banda = document.getElementById("nuevo_nombre_banda");
     let input_nombre_lugar = document.getElementById("nuevo_nombre_lugar");
     let input_fecha = document.getElementById("nueva_fecha_evento");
@@ -252,8 +252,8 @@ async function formularioEditar(id){
         input_img.value = evento.img;
         input_descripcion.value = evento.descripcion ;
     
-        let btnEditar= document.getElementById("btnEditar");
-        btnEditar.addEventListener("submit",(e)=>{
+        let formEditar= document.getElementById("formulario_edit");
+        formEditar.addEventListener("submit",(e)=>{
             e.preventDefault();
             editEvento(id);
             formEdit.classList.add("ocultar_formulario");

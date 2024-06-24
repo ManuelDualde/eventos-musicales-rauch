@@ -1,0 +1,18 @@
+Acceso a pagina en GitHub Pages:
+
+https://manueldualde.github.io/eventos-musicales-rauch/
+
+Urls MockApi:
+
+URL servicio: https://6670a8ef0900b5f8724b4bb0.mockapi.io/api
+
+GET /eventos
+
+GET /eventos/:id
+
+POST /eventos
+
+PUT /eventos/:id
+
+DELETE /eventos/:id
+
